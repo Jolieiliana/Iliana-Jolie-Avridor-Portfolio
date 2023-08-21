@@ -1,16 +1,16 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};
 
 // Smooth scrolling for navigation links with custom duration
 document.querySelectorAll('header nav a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
+        console.log('Link clicked:', link.getAttribute('href'));
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
 
@@ -35,10 +35,13 @@ document.querySelectorAll('header nav a').forEach(link => {
             }
 
             requestAnimationFrame(step);
+
+            // Remove toggle icon and navbar when clicking navbar link
+            menuIcon.classList.remove('bx-x');
+            navbar.classList.remove('active');
         }
     });
 });
-
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -57,9 +60,16 @@ function updateActiveNav() {
         }
     });
 }
+
 window.addEventListener('scroll', updateActiveNav);
 
-
 let header = document.querySelector('header');
+header.classList.toggle('sticky', window.scrollY > 100);
 
-header.classList.toggle('sticky' , window.scrollY > 100);
+const typed = new Typed('.multiple-text', {
+    strings: ['FullStack Developer', 'AI Developer', 'Software Engineer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 100,
+    loop: true,
+});

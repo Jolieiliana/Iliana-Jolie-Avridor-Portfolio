@@ -104,6 +104,7 @@ span {
 
 .home-content p {
     font-size: 1.6rem ;
+    font-family: monospace;
 }
 
 .social-media a {
@@ -173,6 +174,7 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    font-family: 'Monaco';
 
 }
 
@@ -396,6 +398,10 @@ span {
         padding: 10rem 3% 2rem;
     }
 
+    .Skills {
+        padding-bottom: 7rem;
+    }
+
     .footer {
         padding: 2rem 3%;
     }
@@ -428,4 +434,48 @@ span {
         font-size: 2rem;
         margin: 3rem 0;
     }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width:70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .Skills h2 {
+        margin-bottom: 3rem;
+    }
+}
+
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* Adjust the distance as needed */
+    }
+}
+
+.image-container img {
+    animation: floatUpDown 5s ease-in-out infinite alternate; /* Adjust the duration as needed */
 }
