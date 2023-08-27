@@ -179,7 +179,7 @@ span {
 }
 
 .Skills h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .Skills-container {
@@ -231,10 +231,17 @@ span {
 
 .Software-Creations {
     background: var(--second-bg-color);
+    text-align: center;
 }
 
 .Software-Creations h2 {
     margin-bottom: 4rem;
+}
+
+.Software-Creations h3 {
+    margin-bottom: 4rem;
+    font-family: monospace;
+    color: rgba(9, 204, 210, 0.818);
 }
 
 .Software-Creations-container {
